@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Art Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <div class="artwork" onclick="showDetails('art1')">
+                <a href="https://example.com/art1" target="_blank">
+                    <img src="Cimas.jpg" alt="Art 1">
+                    <p>Artwork 1</p>
+                </a>
+            </div>
+            <div class="artwork" onclick="showDetails('art2')">
+                <a href="https://example.com/art2" target="_blank">
+                    <img src="CapePetrels2.jpg" alt="Art 2">
+                    <p>Artwork 2</p>
+                    <div class="artwork" onclick="showDetails('art1')">
+                        <a href="https://example.com/art1" target="_blank">
+                            <img src="CasaOndulada.jpg" alt="Art 1">
+                            <p>Artwork 1</p>
+                            <div class="artwork" onclick="showDetails('art1')">
+                                <a href="https://example.com/art1" target="_blank">
+                                    <img src="AdeliePemguin2.jpg" alt="Art 1">
+                                    <p>Artwork 1</p>
+                                    <div class="artwork" onclick="showDetails('art1')">
+                                        <a href="https://example.com/art1" target="_blank">
+                                            <img src="Crabeaterseal2.jpg" alt="Art 1">
+                                            <p>Artwork 1</p>
+                                            <div class="artwork" onclick="showDetails('art1')">
+                                                <a href="https://example.com/art1" target="_blank">
+                                                    <img src="BarcalLagoFaggnano.jpg" alt="Art 1">
+                                                    <p>Artwork 1</p>
+                                                    <div class="artwork" onclick="showDetails('art1')">
+                                                        <a href="https://example.com/art1" target="_blank">
+                                                            <img src="AdeliesSalto2.jpg" alt="Art 1">
+                                                            <p>Artwork 1</p>
+                </a>
+            </div>
+            <!-- Add more artwork here -->
+        </div>
+        <div id="details" class="details">
+            <span class="close" onclick="hideDetails()">×</span>
+            <h2 id="artTitle">Title</h2>
+            <img id="artImage" src="" alt="Art">
+            <p id="artDescription">Description</p>
+            <div id="auctionDetails">
+                <h3>Auction Details</h3>
+                <p id="auctionBid">Starting Bid: $0</p>
+                <p id="auctionEndDate">Auction Ends: N/A</p>
+                <a id="auctionLink" href="#" target="_blank">Participate in Auction</a>
+                <div id="bidSection">
+                    <h4>Place Your Bid</h4>
+                    <form id="bidForm">
+                        <label for="bidAmount">Bid Amount: </label>
+                        <input type="number" id="bidAmount" min="0" step="1" required>
+                        <button type="submit">Submit Bid</button>
+                    </form>
+                    <p id="bidStatus"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
